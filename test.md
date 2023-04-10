@@ -378,11 +378,11 @@ dZ2 \cdot w2_{11} & dZ2 \cdot w2_{12} & dZ2 \cdot w2_{13}
 dW1=X^T \cdot dZ1 \tag{11}
 
 ```
+
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/loss%E5%AF%B9W1%E7%9A%84%E6%B1%82%E5%AF%BC.jpg?raw=true" />
+
 ```math
-
 dB1=dZ1 \tag{12}
-
 ```
 
 之后只需要根据计算的梯度来更新相应的权重、偏置，经过多轮训练，模型就会逐步的自我修正、拟合、收敛了。
