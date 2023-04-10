@@ -433,7 +433,7 @@ OpenAI也迅速跟进推出了ChatGPT plugin，来连接成百上千的API。这
 
 1. 研究社区中有人提出了“Large Language Models are Zero-Shot Reasoners“，指出只需要在LLM给出答复之前，增加一句“Let's think step by step”，就很能立刻让模型在两个比较难的数学问题数据集上大比例涨点！
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/step_by_step0.png?raw=true" />
-研究人员进而还提出了“Chain of Thought”(CoT)理论、“AI也要求鼓励”的观点。
+研究人员进而还提出了“Chain of Thought”(CoT)理论、“AI求鼓励”的观点，更是写出了大量与此相关的论文。
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/step_by_step1.png?raw=true" />
 
 2. 还是研究社区中最先有人发现，可以通过给ChatGPT“催眠”来突破模型的限制。
