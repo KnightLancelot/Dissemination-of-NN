@@ -438,7 +438,9 @@ OpenAI也迅速跟进推出了ChatGPT plugin，来连接成百上千的API。这
 
 2. 还是研究社区中最先有人发现，可以通过给ChatGPT“催眠”来突破模型的限制。
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/DAN%E7%AA%81%E7%A0%B4ChatGPT%E7%9A%84%E9%99%90%E5%88%B6.png?raw=true"/>
-之后OpenAI才开始跟进，在GPT-4中提供了一个新的特性“System messages”，可以让GPT-4按照用户要求的风格，与用户交互。参见：[Steerability: Socratic tutor](https://openai.com/research/gpt-4)。
+之后OpenAI才开始跟进，在GPT-4中提供了一个新的特性“System messages”，可以让GPT-4按照用户要求的风格，与用户交互。参见：[Steerability： Socratic tutor](https://openai.com/research/gpt-4)。
+
+
 
 
 其实这些LLM本身就是个黑盒，包括设计、训练这些LLM的人也不知道模型内部到底在干什么。
