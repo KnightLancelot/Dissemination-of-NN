@@ -1,2 +1,2 @@
 # Dissemination-of-NN
-神经网络的科普
+科普神经网络
