@@ -56,7 +56,6 @@ X = (x)
 
 #### 权重矩阵W1/B1
 
-$$
 ```math
 
 W1=
@@ -65,9 +64,7 @@ w1_{11} & w1_{12} & w1_{13}
 \end{pmatrix}
 
 ```
-$$
 
-$$
 ```math
 
 B1=
@@ -76,13 +73,11 @@ b1_{1} & b1_{2} & b1_{3}
 \end{pmatrix}
 
 ```
-$$
 
 #### 隐层
 
 我们用3个神经元：
 
-$$
 ```math
 
 Z1 = \begin{pmatrix}
@@ -90,9 +85,7 @@ Z1 = \begin{pmatrix}
 \end{pmatrix}
 
 ```
-$$
 
-$$
 ```math
 
 A1 = \begin{pmatrix}
@@ -100,14 +93,12 @@ A1 = \begin{pmatrix}
 \end{pmatrix}
 
 ```
-$$
 
 
 #### 权重矩阵W2/B2
 
 W2的尺寸是3x1，B2的尺寸是1x1。
 
-$$
 ```math
 
 W2=
@@ -118,9 +109,7 @@ w2_{31}
 \end{pmatrix}
 
 ```
-$$
 
-$$
 ```math
 
 B2=
@@ -129,13 +118,11 @@ b2_{1}
 \end{pmatrix}
 
 ```
-$$
 
 #### 输出层
 
 由于我们只想完成一个拟合任务，所以输出层只有一个神经元，尺寸为1x1：
 
-$$
 ```math
 
 Z2 = 
@@ -144,7 +131,6 @@ Z2 =
 \end{pmatrix}
 
 ```
-$$
 
 ### 2.前向计算
 
@@ -155,33 +141,26 @@ $$
 
 - 线性计算
 
-$$
 ```math
 
 z1_{1} = x \cdot w1_{11} + b1_{1}
 
 ```
-$$
 
-$$
 ```math
 
 z1_{2} = x \cdot w1_{12} + b1_{2}
 
 ```
-$$
 
-$$
 ```math
 
 z1_{3} = x \cdot w1_{13} + b1_{3}
 
 ```
-$$
 
 矩阵形式：
 
-$$
 ```math
 
 \begin{aligned}
@@ -198,48 +177,39 @@ Z1 &=x \cdot
 \end{aligned} \tag{1}
 
 ```
-$$
 
 - 激活函数
 
-$$
 ```math
 
 a1_{1} = Sigmoid(z1_{1})
 
 ```
-$$
 
-$$
 ```math
 
 a1_{2} = Sigmoid(z1_{2})
 
 ```
-$$
 
-$$
 ```math
 
 a1_{3} = Sigmoid(z1_{3})
 
 ```
-$$
 
 矩阵形式：
 
-$$
 ```math
 
 A1 = Sigmoid(Z1) \tag{2}
 
 ```
-$$
 
 #### 输出层
 
 由于我们只想完成一个拟合任务，所以输出层只有一个神经元：
-$$
+
 ```math
 
 \begin{aligned}
@@ -256,7 +226,6 @@ w2_{11} \\\\ w2_{21} \\\\ w2_{31}
 \end{aligned} \tag{3}
 
 ```
-$$
 
 
 
@@ -264,20 +233,16 @@ $$
 
 均方误差（MSE）损失函数：
 
-$$
 ```math
 loss(w,b) = \frac{1}{2} (z2-y)^2 \tag{4}
 ```
-$$
 
 其中，$z2$是预测值，$y$是样本的标签值。
 
 > 标准均方误差的公式：
-> $$
 > ```math
 > loss(w,b) = \frac{1}{n}{\sum_{i=1}^n{[f(x_i)-y_i]^2}}
 > ```
-> $$
 > 其实就是一批数据与单个数据的区别。
 
 ### 3.反向传播
@@ -301,20 +266,17 @@ $$
 
 根据公式4：
 
-$$
 ```math
 
 \frac{\partial loss}{\partial z2} = z2 - y \rightarrow dZ2 \tag{5}
 
 ```
-$$
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/loss%E5%AF%B9Z2%E7%9A%84%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 
 #### 求W2的梯度
 
 根据公式3和W2的矩阵形状，把标量对矩阵的求导分解到矩阵中的每一元素：
 
-$$
 ```math
 
 \begin{aligned}
@@ -336,7 +298,6 @@ $$
 \end{aligned} \tag{6}
 
 ```
-$$
 
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/loss%E5%AF%B9W2%E7%9A%84%E9%93%BE%E5%BC%8F%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/Z2%E5%AF%B9W2%E7%9A%84%E6%B1%82%E5%AF%BC.jpg?raw=true" />
@@ -344,13 +305,11 @@ $$
 
 #### 求B2的梯度
 
-$$
 ```math
 
 \frac{\partial loss}{\partial B2}=dZ2 \rightarrow dB2 \tag{7}
 
 ```
-$$
 
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/loss%E5%AF%B9B2%E7%9A%84%E9%93%BE%E5%BC%8F%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/Z2%E5%AF%B9B2%E7%9A%84%E6%B1%82%E5%AF%BC.jpg?raw=true" />
@@ -360,7 +319,6 @@ $$
 
 根据公式3和A1矩阵的形状：
 
-$$
 ```math
 
 \begin{aligned}
@@ -387,27 +345,23 @@ dZ2 \cdot w2_{11} & dZ2 \cdot w2_{12} & dZ2 \cdot w2_{13}
 \end{aligned} \tag{8}
 
 ```
-$$
 
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/loss%E5%AF%B9A1%E7%9A%84%E9%93%BE%E5%BC%8F%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/Z2%E5%AF%B9A1%E7%9A%84%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 
 现在来看激活函数的误差传播问题，由于公式2在计算时，并没有改变矩阵的形状，相当于做了一个矩阵内逐元素的计算，所以它的导数也应该是逐元素的计算，不改变误差矩阵的形状。根据Sigmoid激活函数的导数公式，有：
 
-$$
 ```math
 
 \frac{\partial A1}{\partial Z1}= Sigmoid'(A1) = A1 \odot (1-A1) \tag{9}
 
 ```
-$$
 
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/sigmoid%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/e%E7%9A%84%E8%B4%9Fx%E6%96%B9%E6%B1%82%E5%AF%BC.jpg?raw=true" />
 
 所以最后到达Z1的误差矩阵是：
 
-$$
 ```math
 
 \begin{aligned}
@@ -416,25 +370,20 @@ $$
 \end{aligned} \tag{10}
 
 ```
-$$
 
 有了dZ1后，再向前求W1和B1的误差，我们直接列在下面：
 
-$$
 ```math
 
 dW1=X^T \cdot dZ1 \tag{11}
 
 ```
-$$
 <img src="https://github.com/KnightLancelot/Dissemination-of-NN/blob/main/files/loss%E5%AF%B9W1%E7%9A%84%E6%B1%82%E5%AF%BC.jpg?raw=true" />
-$$
 ```math
 
 dB1=dZ1 \tag{12}
 
 ```
-$$
 
 之后只需要根据计算的梯度来更新相应的权重、偏置，经过多轮训练，模型就会逐步的自我修正、拟合、收敛了。
 
