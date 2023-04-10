@@ -450,6 +450,8 @@ OpenAI也迅速跟进推出了ChatGPT plugin，来连接成百上千的API。这
 
 ### 尾巴
 最后，让我们用一个小故事来结束这篇文章。
+
 ChatGPT版的回形针问题
+
 <img src="http://res.cloudinary.com/lesswrong-2-0/image/upload/v1669986602/mirroredImages/RYcoJdvmoBbi5Nax7/ledcpw7odbjittuwmysn.jpg"/>
 <img src="http://res.cloudinary.com/lesswrong-2-0/image/upload/v1669986602/mirroredImages/RYcoJdvmoBbi5Nax7/rdfcb6yfheernbv93ksg.jpg"/>
